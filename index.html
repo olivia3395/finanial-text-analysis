@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Sentiment Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-gallery img {
+      max-width: 70%;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Financial Sentiment Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="#datasets">Datasets</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#model">Model Explanation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="datasets">
+    <h2 class="section-title">Datasets</h2>
+    <p>This analysis was performed using financial datasets collected from news articles and Twitter sentiment data.</p>
+    <p>Data was preprocessed and tokenized to understand the sentiment behind various financial trends. The analysis focuses on positive, negative, and neutral sentiment distributions.</p>
+  </section>
+
+  <section id="results">
+    <h2 class="section-title">Results</h2>
+    <p>Below are some visualizations of the results:</p>
+    <div class="image-gallery">
+      <!-- Consolidated Word Cloud Image -->
+      <img src="./wordclouds_financial_datasets.png" alt="Word Clouds of Financial Datasets">
+      <!-- Consolidated Cross-Validation Image -->
+      <img src="./Cross_Validation_Results.png" alt="Cross-Validation Results">
+      <!-- Sentiment Distribution Bar Plots -->
+      <img src="./Sentiment_Distribution.png" alt="Sentiment Distribution">
+      <!-- Top 10 Most Informative Words Bar Plots -->
+      <img src="./Top_10_Informative_Words.png" alt="Top 10 Informative Words">
+      <!-- Sentiment Proportion Pie Charts -->
+      <img src="./Sentiment_Proportion_Pie_Charts.png" alt="Sentiment Proportion Pie Charts">
+    </div>
+  </section>
+
+  <section id="model">
+    <h2 class="section-title">Model Explanation</h2>
+    <p>The Financial Sentiment Analysis used advanced natural language processing models and machine learning techniques to classify financial sentiment:</p>
+    <ul>
+      <li><strong>Data Preprocessing:</strong> Text was cleaned, tokenized, and transformed using techniques like TF-IDF and word embeddings.</li>
+      <li><strong>Model Architecture:</strong> Various machine learning algorithms, such as Logistic Regression and SVM, were utilized to classify the sentiment. The performance of these models was evaluated through cross-validation.</li>
+      <li><strong>Evaluation:</strong> Accuracy and loss were evaluated across multiple folds to measure the model's robustness and generalization to unseen data.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; Financial Sentiment Analysis by Yuyao Wang</p>
+  </footer>
+</body>
+
+</html>
