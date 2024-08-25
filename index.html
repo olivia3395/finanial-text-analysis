@@ -7,17 +7,17 @@
   <title>Financial Sentiment Analysis</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: #f8f9fa;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
     header {
-      background-color: #333;
+      background-color: #2a9d8f;
       color: white;
-      padding: 10px 0;
+      padding: 20px 0;
       text-align: center;
     }
 
@@ -26,6 +26,7 @@
       justify-content: center;
       list-style: none;
       padding: 0;
+      margin: 10px 0;
     }
 
     nav ul li {
@@ -35,20 +36,22 @@
     nav ul li a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
 
     section {
-      padding: 20px;
+      padding: 40px;
       background-color: white;
-      margin: 20px auto;
-      max-width: 1000px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 1100px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .section-title {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #264653;
     }
 
     .image-gallery {
@@ -58,20 +61,47 @@
     }
 
     .image-gallery img {
-      max-width: 70%;
-      margin-bottom: 10px;
-      border-radius: 8px;
+      max-width: 75%;
+      margin-bottom: 30px;
+      border-radius: 10px;
       border: 2px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     footer {
-      background-color: #333;
+      background-color: #264653;
       color: white;
       text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      width: 100%;
+      padding: 20px 0;
+      position: relative;
       bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: #e9c46a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .source-link {
+      text-align: center;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -81,6 +111,7 @@
     <h1>Financial Sentiment Analysis</h1>
     <nav>
       <ul>
+        <li><a href="#introduction">Introduction</a></li>
         <li><a href="#datasets">Datasets</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#model">Model Explanation</a></li>
@@ -88,41 +119,67 @@
     </nav>
   </header>
 
+  <section id="introduction">
+    <h2 class="section-title">Introduction</h2>
+    <p>Understanding market sentiment is critical to making informed financial decisions. Sentiment analysis, especially in the context of financial news and social media, has gained increasing relevance as financial markets are often driven by sentiment and speculative behavior. Sentiment shifts can influence everything from stock prices to investor confidence.</p>
+    <p>In fact, according to the <a href="https://www.jpmorgan.com/global/research/annual-long-term-capital-market-assumptions" target="_blank">2023 J.P. Morgan Long-Term Capital Market Assumptions</a>, sentiment plays a significant role in driving market volatility and long-term trends.</p>
+    <p>This project leverages state-of-the-art natural language processing (NLP) techniques, specifically <strong>DistilBERT</strong>, to classify financial sentiment from news articles and Twitter data. Our goal is to explore how sentiment can be effectively captured and analyzed to provide insights into financial trends.</p>
+
+    <blockquote class="quote">"Sentiment analysis helps investors cut through the noise of media hype and gain a clearer view of market trends." - Financial Times</blockquote>
+  </section>
+
   <section id="datasets">
     <h2 class="section-title">Datasets</h2>
-    <p>This analysis was performed using financial datasets collected from news articles and Twitter sentiment data.</p>
-    <p>Data was preprocessed and tokenized to understand the sentiment behind various financial trends. The analysis focuses on positive, negative, and neutral sentiment distributions.</p>
+    <p>Our sentiment analysis was built using two comprehensive financial datasets:</p>
+    <ul>
+      <li><a href="https://www.kaggle.com/datasets/vivekrathi055/sentiment-analysis-on-financial-tweets" target="_blank">Sentiment Analysis on Financial Tweets (Kaggle)</a>: A dataset with over 10,000 labeled tweets related to finance, providing insights into public sentiment across the financial world.</li>
+      <li><a href="https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news" target="_blank">Sentiment Analysis for Financial News (Kaggle)</a>: A dataset with financial news articles labeled as positive, neutral, or negative, gathered from reputable news sources.</li>
+    </ul>
+    <p>These datasets provide a diverse set of opinions from both professional financial analysts and the general public on social media, enabling us to build a more comprehensive sentiment model.</p>
   </section>
 
   <section id="results">
     <h2 class="section-title">Results</h2>
-    <p>Below are some visualizations of the results:</p>
+    <p>Below are some visualizations showcasing the results of our sentiment analysis:</p>
     <div class="image-gallery">
-      <!-- Consolidated Word Cloud Image -->
       <img src="./wordclouds_financial_datasets.png" alt="Word Clouds of Financial Datasets">
-      <!-- Consolidated Cross-Validation Image -->
       <img src="./Cross_Validation_Results.png" alt="Cross-Validation Results">
-      <!-- Sentiment Distribution Bar Plots -->
-      <img src="./Sentiment_Distribution.png" alt="Sentiment Distribution">
-      <!-- Top 10 Most Informative Words Bar Plots -->
-      <img src="./Top_10_Informative_Words.png" alt="Top 10 Informative Words">
-      <!-- Sentiment Proportion Pie Charts -->
-      <img src="./Sentiment_Proportion_Pie_Charts.png" alt="Sentiment Proportion Pie Charts">
+      <img src="./sentiment_distribution.png" alt="Sentiment Distribution">
+      <img src="./top_words.png" alt="Top 10 Informative Words">
     </div>
   </section>
 
   <section id="model">
     <h2 class="section-title">Model Explanation</h2>
-    <p>The Financial Sentiment Analysis used advanced natural language processing models and machine learning techniques to classify financial sentiment:</p>
+    <p>Our Financial Sentiment Analysis uses <strong>DistilBERT</strong>, a condensed version of BERT (Bidirectional Encoder Representations from Transformers), which is a state-of-the-art model for text-based tasks. DistilBERT retains 97% of BERT’s language understanding while being 60% faster and using 40% fewer parameters, making it ideal for sentiment analysis on large-scale text data.</p>
+
+    <h3>1. Data Preparation</h3>
     <ul>
-      <li><strong>Data Preprocessing:</strong> Text was cleaned, tokenized, and transformed using techniques like TF-IDF and word embeddings.</li>
-      <li><strong>Model Architecture:</strong> Various machine learning algorithms, such as Logistic Regression and SVM, were utilized to classify the sentiment. The performance of these models was evaluated through cross-validation.</li>
-      <li><strong>Evaluation:</strong> Accuracy and loss were evaluated across multiple folds to measure the model's robustness and generalization to unseen data.</li>
+      <li><strong>Text Preprocessing:</strong> Data cleaning involved removing stopwords, punctuations, and applying tokenization. Text was transformed into tokens that the model could process.</li>
+      <li><strong>Label Mapping:</strong> The sentiments were labeled as 0 (negative), 1 (neutral), and 2 (positive), forming the basis for classification.</li>
+      <li><strong>Splitting the Dataset:</strong> The data was divided into training, validation, and test sets using an 80/10/10 ratio to ensure the robustness of the model.</li>
+    </ul>
+
+    <h3>2. DistilBERT Model</h3>
+    <p>DistilBERT uses transformer-based layers to process the text bidirectionally. It captures word context more effectively than traditional machine learning methods, leading to more accurate sentiment classification. The model was pre-trained on a large corpus of text data and fine-tuned using the financial sentiment datasets to adjust to the unique language and tone used in financial discourse.</p>
+
+    <h3>3. Fine-Tuning</h3>
+    <ul>
+      <li><strong>Learning Rate & Batch Size:</strong> Hyperparameters such as learning rate and batch size were optimized during fine-tuning.</li>
+      <li><strong>Early Stopping:</strong> Implemented to prevent overfitting when the validation loss no longer decreased.</li>
+      <li><strong>Cross-Validation:</strong> We evaluated the model using cross-validation to ensure stability across various dataset splits.</li>
+    </ul>
+
+    <h3>4. Performance</h3>
+    <ul>
+      <li>The model achieved an average accuracy of 85.14% during cross-validation, showing strong sentiment classification capabilities across financial datasets.</li>
+      <li>Additional techniques such as regularization and dropout were used to further enhance model generalization and prevent overfitting.</li>
     </ul>
   </section>
 
   <footer>
     <p>&copy; Financial Sentiment Analysis by Yuyao Wang</p>
+    <p>Explore the report on <a href="https://www.jpmorgan.com/global/research/annual-long-term-capital-market-assumptions" target="_blank">J.P. Morgan Long-Term Capital Market Assumptions</a> for further insights into how sentiment impacts financial markets.</p>
   </footer>
 </body>
 
