@@ -7,7 +7,7 @@ This project applies advanced Natural Language Processing (NLP) techniques to pe
 
 ### **Why Sentiment Analysis Matters**
 
-Financial sentiment analysis plays a crucial role in understanding market behavior and predicting future trends. Sentiment reflected in financial news and social media can influence everything from stock prices to investment strategies. This project provides a deeper dive into analyzing the sentiment around financial events, helping investors make more informed decisions. Notably, sentiment analysis is highlighted as a key component in reports like the [J.P. Morgan Long-Term Capital Market Assumptions](https://www.jpmorgan.com/global/research/annual-long-term-capital-market-assumptions), demonstrating its importance in modern financial analysis.
+Financial sentiment analysis plays a crucial role in understanding market behavior and predicting future trends. Sentiment reflected in financial news and social media can influence everything from stock prices to investment strategies. This project provides a deeper dive into analyzing the sentiment around financial events, helping investors make more informed decisions. 
 
 
 ## **Getting Started**
